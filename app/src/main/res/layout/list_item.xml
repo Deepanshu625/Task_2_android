@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="10"
+    android:background="@android:color/white"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:id="@+id/name"
+        android:textSize="26dp"
+        android:textColor="#484846"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
