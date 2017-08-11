@@ -26,17 +26,9 @@ public class data_adapter extends ArrayAdapter<data> {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
-
         data current_data = getItem(position);
-
         TextView pic_name = (TextView) listItemView.findViewById(R.id.name);
         pic_name.setText(current_data.getname());
-
-
-
-
-        // Return the whole list item layout (containing 2 TextViews and an ImageView)
-        // so that it can be shown in the ListView
         return listItemView;
     }
 }

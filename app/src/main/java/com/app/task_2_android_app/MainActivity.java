@@ -1,6 +1,7 @@
 package com.app.task_2_android_app;
 
 
+import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -9,13 +10,14 @@ import android.support.design.widget.TabLayout;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
+import java.lang.reflect.Field;
 
 
 public class MainActivity extends AppCompatActivity {
 
 
 
-    // Titles of the individual pages (displayed in tabs)
+
     private final String[] PAGE_TITLES = new String[] {
             "Action",
             "Show List"
@@ -34,12 +36,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-    //    context=getApplicationContext();
-
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mViewPager.setAdapter(new MyPagerAdapter(getFragmentManager()));
-
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(mViewPager);
     }
@@ -68,5 +66,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Task_2_android_app</string>
+    <string name="title_activity_to_click">To_click</string>
 </resources>
