@@ -39,7 +39,7 @@ public class LowHighGraph extends android.support.v7.widget.AppCompatImageView {
     }
 
     private void init(Context context) {
-        this.percentage = 0.8;
+        this.percentage = 0.9;
         invalidate();
     }
 
@@ -58,10 +58,6 @@ public class LowHighGraph extends android.support.v7.widget.AppCompatImageView {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-/*
-        Paint bgPaint = new Paint();
-        bgPaint.setColor(Color.WHITE);
-        canvas.drawPaint(bgPaint);*/
 
         int width = getWidth();
         int height = getHeight();

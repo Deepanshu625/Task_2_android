@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 public class Show_fragment extends Fragment {
 
-    public static final String LOG_TAG = Show_fragment.class.getName();
+
 
      public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.display, container, false);
@@ -38,24 +38,32 @@ public class Show_fragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.display);
-
-
         ArrayList<data> arrayList = new ArrayList<data>();
-
         String path = Environment.getExternalStorageDirectory().toString()+"/Pictures/Camera_App";
+        File mediaStorageDir = new File("/sdcard/Pictures/Camera_App");
+        if (!mediaStorageDir.exists()) {
+            if (!mediaStorageDir.mkdirs()) {
+                Log.d("MyCameraApp", "failed to create directory");
+            }
+        }
         File f = new File(path);
         File file[] = f.listFiles();
         Log.e("FOLDER", "New folder");
-        for(int i = 0; i < file.length; i++) {
+        if(file==null)
+        {
+            arrayList.add(new data("NO Image clicked yet....."));
+        }
+        else {
+            for (int i = 0; i < file.length; i++) {
 
-            //System.out.println(" "+file[i]);
-            String str=file[i].toString();
-            int a = str.lastIndexOf('/')+1;
-            int b = str.length();
-            String sub=str.substring(a,b);
-            arrayList.add(new data(sub));
-            Log.e("FOLDER", ""+sub);
+                //System.out.println(" "+file[i]);
+                String str = file[i].toString();
+                int a = str.lastIndexOf('/') + 1;
+                int b = str.length();
+                String sub = str.substring(a, b);
+                arrayList.add(new data(sub));
+                Log.e("FOLDER", "" + sub);
+            }
         }
         ListView listView = (ListView) view.findViewById(R.id.list);
         data_adapter adapter = new data_adapter(getActivity(),arrayList);
