@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
             new Show_fragment()
     };
 
-    public static final int MY_PERMISSIONS_REQUEST_READ_Storage=1,MY_PERMISSIONS_REQUEST_write_storage=786,camera_permission=999;
+    public static final int MY_PERMISSIONS_REQUEST_READ_Storage=1;
+    public static final int MY_PERMISSIONS_REQUEST_write_storage=786;
+    public static final int camera_permission=999;
     private ViewPager mViewPager;
 
     @Override

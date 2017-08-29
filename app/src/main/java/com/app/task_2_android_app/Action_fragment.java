@@ -31,7 +31,7 @@ public class Action_fragment extends Fragment {
 
                         Intent i = new Intent(getActivity(), To_click.class);
                         startActivity(i);
-                        Log.e("fuck","fuck");
+                        
                     }
                 }
         );

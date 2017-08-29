@@ -18,11 +18,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.Toast;
-
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -219,12 +217,10 @@ public class To_click extends AppCompatActivity {
         startActivity(i);
     }
     @Override
-    public void onBackPressed() {
+    public void onBackPressed()
+     {
         super.onBackPressed();
 
     }
-
-
-
 
 }
